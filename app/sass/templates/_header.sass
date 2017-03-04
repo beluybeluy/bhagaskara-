@@ -1,0 +1,83 @@
+.header
+   padding: 60px 0 50px 0
+   transition: all .5s ease
+   &-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__logo
+      font: 30px/30px ExistenceLight
+      font-weight: 700
+      cursor: pointer
+      text-decoration: none
+      color: #676767
+      display: block
+      &_theme-color
+         color: $main-color
+   &-list
+      display: flex
+      max-width: 750px
+      justify-content: space-between
+      &__item
+         flex: 1
+         list-style: none
+      &__link
+         font: 18px/18px LatoLight
+         text-transform: uppercase
+         color: #676767
+         padding-left: 45px
+         font-weight: 700
+         cursor: pointer
+         text-decoration: none
+         transition: .5s ease-out
+         &:hover
+            color: $main-color
+            transition: .5s ease-in
+         &_first
+            padding-left: 0
+.touch-nav
+   display: none
+   position: absolute
+   width: 45px
+   height: 45px
+   right: 20px
+   top: 50%
+   transform: rotate(0deg) translateY(-50%)
+   transition: .5s ease-in-out  
+   cursor: pointer   
+   &__item
+      display: block
+      position: absolute
+      height: 7px
+      width: 100%
+      background: $main-color
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      transform: rotate(0deg)
+      transition: .25s ease-in-out
+      &:first-child
+         top: 0px
+      &:nth-child(2)
+         top: 14px
+      &:last-child
+         top: 28px
+.touch-nav.open .touch-nav__item:first-child
+   top: 14px
+   transform: rotate(135deg)
+.touch-nav.open .touch-nav__item:nth-child(2)
+   opacity: 0
+   left: -60px
+.touch-nav.open .touch-nav__item:last-child
+   top: 14px
+   transform: rotate(-135deg)
+.touch-nav__item.open   
+   background: #000   
+.sticky
+   position: fixed
+   top: 0
+   left: 0
+   z-index: 1000
+   padding: 15px 0
+   right: 0
+   background: #fff   

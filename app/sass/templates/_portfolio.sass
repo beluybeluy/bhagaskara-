@@ -1,0 +1,81 @@
+/*START PORTFOLIO SECTION*/
+.portfolio
+   
+   &-container
+      padding: 95px 0 115px 0
+      background: #fff
+      position: relative
+      top: -45px
+      top: 
+   &__btn
+      margin-top: 40px
+   &-nav
+      margin-top: 100px
+   &-nav-list   
+      margin: auto
+      list-style: none
+      display: flex
+      justify-content: space-between
+      max-width: 405px
+      &__item
+         //margin: 0 10px
+      &__link
+         font: 18px/18px HelveticaLight
+         color: #777777
+         border: 1px solid #000
+         border-radius: 5px
+         padding: 10px 20px
+         text-transform: uppercase
+         transition: .5s ease-out
+         cursor: pointer   
+         &:hover
+            background: $main-color
+            color: #fff
+            transition: .5s ease-in
+            border-color: $main-color
+   &-gallery
+      &__link
+         display: inline-block
+         position: relative
+         height: 360px
+         &:hover:before
+            transform: scale(1)
+         &:before
+            content: "+"
+            position: absolute
+            display: flex
+            justify-content: center
+            flex-flow: column
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: rgba(0,0,0,0.5)
+            transition: 0.5s
+            transform: scale(0)
+            color: #fff
+            font-size: 100px 
+      &-wrap
+         margin-top: 70px
+         display: flex
+         justify-content: space-between
+         flex-wrap: wrap
+         
+      &-item
+         padding: 20px 10px 10px 10px
+         box-sizing: border-box
+         flex: 1 370px
+         &__img
+            width: 360px
+            height: 360px
+         &__title
+            font: 24px/24px HelveticaLight
+            color: #222222
+            padding-top: 25px
+         &__desc
+            font: 17px/17px HelveticaLight
+            color: #777777
+/*END PORTFOLIO SECTION*/        
+            
+   
+         

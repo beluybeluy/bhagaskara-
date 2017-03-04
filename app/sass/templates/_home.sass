@@ -1,0 +1,98 @@
+.home
+   padding: 110px 0 80px 0
+   background: url(../img/home-bg.jpg) no-repeat center
+   background-size: cover
+   &-arrow
+      display: inline-block
+      width: 120px
+      height: 120px
+      &__link
+         display: block
+         height: 100%
+         width: 100%
+         background-image: url(../img/arrow.png)
+         background-repeat: no-repeat
+         transition: .5s ease-in
+         cursor: pointer   
+         &:hover, &:focus
+            background-image: url(../img/arrow-hover.png)
+            transition: .5s ease-out
+   &-hexogen
+      &__wrapper
+         margin-top: 100px
+         display: flex
+         justify-content: space-between
+         align-items: flex-end
+         min-height: 400px  
+         flex-wrap: wrap
+         padding-bottom: 30px
+      &__item
+         width: 180px
+         height: 180px
+         overflow: hidden
+         
+         &_services
+            align-self: flex-start
+         &_portfolio
+            align-self: flex-start
+      &__link
+         font: 18px/18px LatoRegular
+         display: inline-block
+         height: 100%
+         width: 100%
+         text-decoration: none
+         color: #fff
+         background-image: url("../img/bha.png")
+         background-repeat: no-repeat
+         font-weight: 700
+         position: relative
+         padding-top: 115px
+         transition: .5s ease-in
+         &:hover, &:focus, &:active
+            background-image: url("../img/hoverbg.png") 
+            transition: .5s ease-out
+         &:before
+            position: absolute
+            top: 34px
+            left: 58px
+            content: ""
+            display: inline-block
+            width: 64px
+            height: 64px
+            background-image: url("../img/menu-icons.png")
+            background-repeat: no-repeat
+            background-size: 64px auto
+         &_about
+            &:before
+               background-position: 0px -0px
+         &_team
+            &:before
+               background-position: 0px -62px 
+         &_services
+            &:before
+               background-position: 0px -125px   
+         &_portfolio
+            &:before
+               background-position: 0px -188px
+         &_blog
+            &:before
+               background-position: 0px -250px 
+         &_contact
+            &:before
+               background-position: 0px -313px   
+
+   &__title
+      color: #fff 
+      font-weight: 700
+      &_color
+         color: $main-color
+   &__under-title
+      font: 48px/48px LatoHairline
+      font-weight: 700
+      padding-bottom: 30px
+      padding-top: 100px
+      color: #fff
+   &__description
+      font: 24px/34px LatoHairline
+      color: #fff
+      font-weight: 700

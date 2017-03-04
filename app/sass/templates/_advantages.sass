@@ -1,0 +1,50 @@
+.advantages
+   padding: 120px 0 230px 
+   &-wrap
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+   &-item
+      text-align: center
+      margin: auto
+      &__heart
+         &:before
+            cursor: pointer
+            background-position: 0 0
+         &:hover:before
+            background-position: -200px 0
+      &__diamond
+         &:before
+            cursor: pointer
+            background-position: 0 -200px
+         &:hover:before
+            background-position: -200px -200px
+      &__coffee
+         &:before
+            cursor: pointer
+            background-position: 0 -400px
+         &:hover:before
+            background-position: -200px -401px   
+      &__phone
+         &:before
+            cursor: pointer
+            background-position: 0 -600px
+         &:hover:before
+            background-position: -200px -601px      
+      &__title
+         font: 24px/24px LatoLight
+         padding: 45px 0 
+         &:before
+            content: ""
+            display: block
+            margin: 0 auto 25px
+            height: 200px
+            width: 200px
+            background-image: url("../img/icons-sprite.png")
+            background-repeat: no-repeat
+            
+      &__desc
+         font: 16px/24px LatoLight
+         font-weight: 700
+         color: #676767
+         
