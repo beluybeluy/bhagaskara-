@@ -246,6 +246,9 @@
     color: #fff;
     font-weight: 700; }
 
+.hidden {
+  opacity: 0; }
+
 .header {
   padding: 60px 0 50px 0;
   -webkit-transition: all .5s ease;
@@ -369,7 +372,8 @@
   background: #fff; }
 
 .advantages {
-  padding: 120px 0 230px; }
+  padding: 120px 0 230px;
+  overflow: hidden; }
   .advantages-wrap {
     display: -webkit-box;
     display: -webkit-flex;

@@ -1,8 +1,4 @@
-mixin inner
-  - var n = 1
-  while n <= 3
-    div(class='hex-mask hex-mask' + n) 
-      div(class='hex-part hex-part' + n++)
+
 section.home.section-text_align-center
    .container
       h1.title.home__title Bhagas
@@ -13,17 +9,17 @@ section.home.section-text_align-center
          br
          | fermentum fringilla.
       .home-hexogen__wrapper
-         .home-hexogen__item.home-hexogen__item_about.animated
+         .home-hexogen__item.home-hexogen__item_about.animated.hidden
             a(href="#" onclick="slowScroll('.about')").home-hexogen__link.home-hexogen__link_about About
-         .home-hexogen__item.home-hexogen__item_team.animated
+         .home-hexogen__item.home-hexogen__item_team.animated.hidden
             a(href="#" onclick="slowScroll('.team')").home-hexogen__link.home-hexogen__link_team Team  
-         .home-hexogen__item.home-hexogen__item_services.animated
+         .home-hexogen__item.home-hexogen__item_services.animated.hidden
             a(href="#" onclick="slowScroll('.skills')").home-hexogen__link.home-hexogen__link_services Services
-         .home-hexogen__item.home-hexogen__item_portfolio.animated
+         .home-hexogen__item.home-hexogen__item_portfolio.animated.hidden
             a(href="#" onclick="slowScroll('.portfolio')").home-hexogen__link.home-hexogen__link_portfolio.home-hexogen__link_active Portfolio
-         .home-hexogen__item.home-hexogen__item_blog.animated
+         .home-hexogen__item.home-hexogen__item_blog.animated.hidden
             a(href="#" onclick="slowScroll('.feedback')").home-hexogen__link.home-hexogen__link_blog Blog 
-         .home-hexogen__item.home-hexogen__item_contact.animated
+         .home-hexogen__item.home-hexogen__item_contact.animated.hidden
             a(href="#" onclick="slowScroll('.contact')").home-hexogen__link.home-hexogen__link_contact Contact  
       .home-arrow.bounceInUp      
          a.home-arrow__link(href='#' onclick="slowScroll('.header')")
