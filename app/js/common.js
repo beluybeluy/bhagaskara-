@@ -1,10 +1,52 @@
+//---GALLERY---
 $(function () {
    $('.portfolio-gallery__link').fancybox({
       transitionIn: 'elastic'
       , transitionOut: 'elastic'
       , titlePosition: 'over'
    });
+});
+
+$(function(){
+function visibleElement(elemView,elemAnimated,classEl){
+   elemView.on('inview',function(event,isInView){
+      if(isInView){
+         elemAnimated.addClass(classEl);
+      }
+      else{
+         elemAnimated.removeClass(classEl);
+      }
+   })
+}
+var $about = $('.about');   
+var $contact = $('.contact');   
+var $contactItem = $('.contact-item');   
+var $homeArrow = $('.home-arrow');   
+var $homeItem = $('.home-hexogen__item');   
+var $aboutItem = $('.about-item');
+var bounceInLeft = "bounceInLeft";  
+var bounceInRight = "bounceInRight";  
+var bounceInDown = "bounceInDown";
+   $(window).resize(function () {
+   if($(window).width() > 768){
+      visibleElement($about,$aboutItem.eq(1),bounceInRight);
+visibleElement($about,$aboutItem.eq(0),bounceInLeft);
+visibleElement($homeArrow,$homeItem.eq(0),bounceInLeft);
+visibleElement($homeArrow,$homeItem.eq(1),bounceInLeft);
+visibleElement($homeArrow,$homeItem.eq(2),bounceInDown);
+visibleElement($homeArrow,$homeItem.eq(3),bounceInDown);
+visibleElement($homeArrow,$homeItem.eq(4),bounceInRight);
+visibleElement($homeArrow,$homeItem.eq(5),bounceInRight);
+visibleElement($contact,$contactItem.eq(0),bounceInLeft);
+visibleElement($contact,$contactItem.eq(1),bounceInRight);
+   }
+
 })
+});
+
+    
+
+
 $(function () {
       var $pageNav = $('.header');
       var $navigOffset = $pageNav.offset();
@@ -31,19 +73,18 @@ $(".skills-item__strip").each(function () {
          $bar.animate({
             width: percent
          }, {
-            duration: 1500
+            duration: 2000
             , step: function (now) {
                $progressBarTitle.text(Math.round(now) + '%');
             }
          })
       })
    })
-   //
 var touch = $('.touch-nav'); 
 var menu = $('.header-nav'); 
 function slowScroll(clas) {
    $(touch).toggleClass('open');
-   var offset = 0;
+   var offset = 50;
    if ($(window).width() < 768) {
       menu.slideToggle();
    }
